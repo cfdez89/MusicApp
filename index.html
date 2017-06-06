@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = musicaBeta>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="description" content="description here!">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+        <title>Musica Beta</title>
+        <!-- Start css dependences -->
+        <script type="text/javascript" src="/libs/jquery/jquery-3.1.1.min.js"></script>
+     
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/styles/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="/styles/font-awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="/styles/ui-notification/angular-ui-notification.min.css">
+        <link rel="stylesheet" href="/styles/app/app.css">
+        <!-- End css dependences -->
+
+        <!-- Start Google properties -->
+        <meta property="og:url" content="http://">
+        <meta property="og:title" content="Musica beta">
+        <meta property="og:description" content="Vendemos la mejor música">
+        <meta property="og:site_name" content="Musica beta">
+        <!-- End Google properties -->
+
+        <meta name="apple-mobile-web-app-title" content="Musica beta">
+        <meta name="application-name" content="Musica beta">
+        
+        <!-- Start libs dependences -->  
+        <script type="text/javascript" src="/libs/angular/angular.min.js"></script>
+        <script type="text/javascript" src="libs/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/libs/ui-bootstrap/ui-bootstrap-tpls-2.1.3.min.js"></script>
+        <script type="text/javascript" src="/libs/ui-notification/angular-ui-notification.min.js"></script> 
+        <script type="text/javascript" src="/libs/ui-router/angular-ui-router.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+        <!-- End libs dependences --> 
+
+        
+        
+        <!-- Start configdependences --> 
+        <script type="text/javascript" src="/config/app.js"></script>
+        <script type="text/javascript" src="/config/config.js"></script>
+        <!-- End routes dependences --> 
+
+        <!-- Start constants dependences -->
+        <script type="text/javascript" src="/config/constants.js"></script>
+        <!-- End constants dependences --> 
+
+
+        <!-- Start services dependences --> 
+        <script type="text/javascript" src="/services/notificationService.js"></script>
+        <script type="text/javascript" src="/services/albumsService.js"></script>
+        <script type="text/javascript" src="/services/songsService.js"></script>
+        <!-- End services dependences --> 
+
+        <!-- Start controllers dependences --> 
+        <script type="text/javascript" src="/components/home/homeCtl.js"></script>
+        <!-- End controllers dependences -->   
+    </head>
+    <body>
+        <br></br>
+        <div ui-view>
+            <!-- charged specified template here -->
+        </div>
+    </body>
+</html>

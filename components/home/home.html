@@ -1,0 +1,58 @@
+<div class="songs-container">
+	<div class="title" >
+        <h1 align="center">Canciones mas sonadas</h1>    
+    </div>
+    <div class="body container-fluid"> 
+        <div class="panel-body" >
+             <div class="row">
+                 <table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Título</th>
+							<th>Album</th>
+                            <th>Artista</th>
+                            <th>Reproducciones</th>
+							<th>&nbsp;</th>
+				        </tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat = "sng in vm.songs | orderBy:'-reproducciones'">
+							<td>{{sng.nombre}}</td> 
+                            <td>{{sng.album}}</td> 
+                            <td>{{sng.artista}}</td> 
+                            <td>{{sng.reproducciones}}</td>
+							<td style="white-space: nowrap">
+			                    <button class="btn btn-default btn-xs"  uib-tooltip="Reproducir" ng-click="vm.playSong(sng)"><span class="glyphicon glyphicon-play"></span></button> 
+			                </td>
+						</tr>
+					</tbody>
+				</table>
+            </div>
+        </div>  
+    </div>
+    <br></br>   
+</div>
+<div class="albums-container">
+	<div class="title" >
+        <h1 align="center">Albums mas vendidos</h1>    
+    </div>
+    <div class="body container-fluid"> 
+        <div class="panel-body" >
+             <div class="row">
+                 <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2"  ng-repeat="alb in vm.albums | orderBy:'-vendidos'"> 
+                    <div class="thumbnail" align="center" >
+                        <img ng-src="{{alb.urlImagen}}" width="60%" height="60%" class="img-rounded"></img>
+                        <div class="caption">
+                            <h6><b>{{alb.nombre}}</b></h6>
+                            <h6><i>{{alb.lanzamiento}}-{{alb.artista}}</i></h6>
+                            <h6><span class="badge badge-default">{{alb.vendidos}}</span>&emsp;vendidos</h6>
+                            <button type="button" class="btn btn-default btn-sm" ng-click="vm.buyAlbum(alb)"><i class="glyphicon glyphicon-shopping-cart"></i><span>&emsp;Comprar</spam></button>
+                            <br></br>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <br></br>   
+</div>
