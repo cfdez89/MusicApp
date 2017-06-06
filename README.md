@@ -1,6 +1,6 @@
 # MusicApp
 
-App using Firebase and AngularJS
+Basic App to learn Firebase, using AngularJS
 
 # Preview
 
